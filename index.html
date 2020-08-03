@@ -7,6 +7,10 @@
   <title>Material Design for Bootstrap</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
@@ -21,7 +25,35 @@
 <body>
 
   <!-- Start your project here-->  
-  
+  <body>
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <nav class="sidebar">
+          <ul class="sidebar__toggled">  
+            <li><a href="javascript:void(0)" id="main-toggle" class="sidebar-toggle">Menu</a></li>
+          </ul>
+        </nav>
+        <nav class="sidebar">
+          <ul>  
+            <li class="title">Item Group</li>
+            <li><a><span class="icon glyphicon glyphicon-link"></span>Link1</a></li>
+            <li><a><span class="icon glyphicon glyphicon-link"></span>link2</a></li>
+            <li>
+              <a class="dropdown-toggle" href="#"><span class="icon glyphicon glyphicon-link"></span></span>Sub menu</a>
+              <ul class="dropdown-menu" data-role="dropdown">
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li class="divider"></li>
+                <li><a href="">Subitem 4</a></li>
+                <li class="disabled"><a href="#">Subitem 4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    <!--<div id="page-content-wrapper"><button class="btn btn-default sidebar-toggle">Toggle Sidebar</button></div>-->
+    </div>
   <!-- End your project here-->
 
   <!-- jQuery -->
@@ -33,7 +65,13 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+  $(".sidebar-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+  });
+  $("[data-role=dropdown]").dropdown();
+  </script>
 
 </body>
 </html>
