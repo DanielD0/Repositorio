@@ -1,7 +1,5 @@
 <footer class="section">
-    <div class="center grey-text">
-    <i class="fas fa-copyright    ">SPEM</i>
-    </div>
+   <h1>HOLA</h1>
 </footer>
 <!-- jQuery -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
